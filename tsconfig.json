@@ -1,34 +1,29 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    "rootDir": "./src",
-    "outDir": "./dist",
+    // Ambiente alvo: última versão do ECMAScript
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
-    "target": "esnext",
-    "types": [],
+    // Sistema de módulos: import/export moderno
+    "module": "ESNext",
+    "moduleResolution": "Node",
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Recommended Options
-    "strict": true,
+    // JSX para React 17+ (não precisa de import React)
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": false,
-    "moduleResolution": "bundler",
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
+
+    // Segurança de tipos
+    "strict": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Compatibilidade com ferramentas de bundlers (Vite/ESBuild)
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Vite não precisa de saída TS → JS, só checagem
+    "noEmit": true,
 
     // src path alias
     "baseUrl": ".",
@@ -37,5 +32,6 @@
         "./src/*"
       ]
     }
-  }
+  },
+  "include": ["src", "vite.config.ts"],
 }
