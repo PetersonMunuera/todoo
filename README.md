@@ -1,1 +1,3 @@
-#Todoo
+# Todoo
+
+## Aplicação React + Vite + TypeScript
