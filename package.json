@@ -1,18 +1,17 @@
 {
   "name": "todoo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "To-do app to learn advanced subjects about web developing.",
   "scripts": {
     "dev": "vite",
-    "build":"vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "Peterson Munuera",
   "license": "ISC",
   "devDependencies": {
+    "typescript": "^5.9.2",
     "vite": "^7.1.7"
   }
 }
